@@ -57,6 +57,7 @@ A API estará rodando em http://localhost:3000
   "idade": 25,
   "email": "joao@email.com"
 }
+```
 
 ### 📋 Listar Usuários  
 **GET** `/usuarios`  
@@ -79,7 +80,6 @@ Optei por usar Node.js e Express, tecnologias com as quais estou mais familiariz
 
 O banco de dados usado foi SQLite, por ser leve e fácil de configurar para testes locais.
 
-Ainda não implementei autenticação, testes automatizados ou estrutura com Design Patterns avançados, mas estou aberto a aprimorar o projeto conforme necessário.
 
 ---
 
@@ -93,4 +93,3 @@ Ainda não implementei autenticação, testes automatizados ou estrutura com Des
 ## 🙋‍♂️ Contato
 
 Em caso de dúvidas ou sugestões, fique à vontade para entrar em contato!
-
