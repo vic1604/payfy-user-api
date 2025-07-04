@@ -48,5 +48,8 @@ Esta API permite criar e gerenciar usuários, bem como definir configurações e
 | tema              | String   | Apenas `dark`, `medium` ou `light` |
 | notificacoes_email | Booleano | Indica se notificações por email estão ativadas |
 
+<<<<<<< HEAD
 
 ### ESPERO QUE GOSTEM!
+=======
+
