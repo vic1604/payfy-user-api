@@ -1,35 +1,52 @@
 # Payfy User API
 
-API REST simples para gerenciamento de usuários e suas configurações.
+API REST para gerenciamento de usuários e suas configurações, desenvolvida como parte do Desafio Técnico Payfy.
 
-## Como rodar
+---
 
-1. Clone o repositório
-2. Rode `npm install` para instalar dependências
-3. Execute `npm start` para iniciar o servidor
-4. Acesse `http://localhost:3000`
+## 💡 Visão Geral
 
-## Rotas
+Esta API permite criar e gerenciar usuários, bem como definir configurações específicas para cada usuário, utilizando banco de dados SQLite para persistência leve e eficiente.
 
-- POST `/users`: criar usuário (nome, idade >=18, email)
-- POST `/user-configs`: criar configuração (user_id, tema, notificacoes_email)
-- GET `/users`: listar usuários com suas configurações
+---
 
-## Requisitos
+## 🚀 Funcionalidades
 
-- Node.js instalado (versão >= 16)
+- **Criar usuários** com validação para idade mínima de 18 anos.
+- **Criar configurações de usuário** armazenadas em tabela separada.
+- **Listar usuários** junto com suas configurações.
+- Modelo de dados aderente ao desafio:
+  - Usuário: `nome` (string), `idade` (inteiro), `email` (string, único)
+  - Configuração: `tema` (`dark`, `medium` ou `light`), `notificacoes_email` (booleano)
 
-## Como subir no GitHub
+---
 
-No terminal, dentro da pasta do projeto:
+## 🛠 Tecnologias Utilizadas
 
-```bash
-git init
-git add .
-git commit -m "Projeto base Payfy User API"
-git branch -M main
-git remote add origin https://github.com/seu-usuario/payfy-user-api.git
-git push -u origin main
-```
+- Node.js
+- Express.js
+- SQLite3
+- npm (gerenciador de pacotes)
 
-Troque `seu-usuario` pelo seu usuário real do GitHub.
+---
+
+## 📋 Modelos de Dados
+
+### Usuário
+
+| Campo | Tipo    | Observações                  |
+|-------|---------|-----------------------------|
+| nome  | String  | Obrigatório                 |
+| idade | Inteiro | Deve ser maior ou igual a 18 |
+| email | String  | Obrigatório e único          |
+
+### Configuração de Usuário
+
+| Campo             | Tipo     | Observações                      |
+|-------------------|----------|---------------------------------|
+| user_id           | Inteiro  | Chave estrangeira para Usuário  |
+| tema              | String   | Apenas `dark`, `medium` ou `light` |
+| notificacoes_email | Booleano | Indica se notificações por email estão ativadas |
+
+
+### ESPERO QUE GOSTEM!
