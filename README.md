@@ -1,60 +1,44 @@
-# Payfy User API
+# Payfy - User API
 
-API REST para gerenciamento de usuários e suas configurações, desenvolvida como parte do Desafio Técnico Payfy.
-
----
-
-## 💡 Visão Geral
-
-Esta API permite criar e gerenciar usuários, bem como definir configurações específicas para cada usuário, utilizando banco de dados SQLite para persistência leve e eficiente.
+Este projeto é um desafio técnico proposto pela Payfy. A aplicação é uma API REST simples para controle de usuários e suas configurações.
 
 ---
 
-## 🚀 Funcionalidades
-
-- **Criar usuários** com validação para idade mínima de 18 anos.
-- **Criar configurações de usuário** armazenadas em tabela separada.
-- **Listar usuários** junto com suas configurações.
-- Modelo de dados aderente ao desafio:
-  - Usuário: `nome` (string), `idade` (inteiro), `email` (string, único)
-  - Configuração: `tema` (`dark`, `medium` ou `light`), `notificacoes_email` (booleano)
-
----
-
-## 🛠 Tecnologias Utilizadas
+## 🔧 Tecnologias Utilizadas
 
 - Node.js
-- Express.js
-- SQLite3
-- npm (gerenciador de pacotes)
+- Express
+- SQLite (Banco de Dados)
+- Sequelize (ORM)
 
 ---
 
-## 📋 Modelos de Dados
+## 🗂️ Estrutura do Projeto
 
-### Usuário
+- `app.js` — Arquivo principal da aplicação
+- `database.js` — Configuração e conexão com o banco de dados
+- `models/` — Modelos do banco de dados
+- `routes/` — Rotas da aplicação
 
-| Campo | Tipo    | Observações                  |
-|-------|---------|-----------------------------|
-| nome  | String  | Obrigatório                 |
-| idade | Inteiro | Deve ser maior ou igual a 18 |
-| email | String  | Obrigatório e único          |
+---
 
-### Configuração de Usuário
+## 📦 Como Rodar o Projeto
 
-| Campo             | Tipo     | Observações                      |
-|-------------------|----------|---------------------------------|
-| user_id           | Inteiro  | Chave estrangeira para Usuário  |
-| tema              | String   | Apenas `dark`, `medium` ou `light` |
-| notificacoes_email | Booleano | Indica se notificações por email estão ativadas |
+1. **Clone o repositório:**
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+```bash
+git clone https://github.com/vic1604/payfy-user-api.git
+cd payfy-user-api
+```
 
-### ESPERO QUE GOSTEM!
-=======
+2. **Instale as dependências:**
 
-=======
+```bash
+npm install
+```
 
-ESPERO QUE GOSTEM!
+3. **Execute o projeto:**
 
+```bash
+node app.js
+```
