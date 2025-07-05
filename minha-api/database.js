@@ -1,12 +1,12 @@
 const knex = require('knex')({
   client: 'sqlite3',
   connection: {
-    filename: './mydb.sqlite' // banco SQLite no arquivo mydb.sqlite
+    filename: './mydb.sqlite' 
   },
   useNullAsDefault: true
 });
 
-// Criar tabela users se não existir
+// Cria a tabela 'users' se nao existir
 knex.schema.hasTable('users').then(exists => {
   if (!exists) {
     console.log("Criando tabela 'users'...");
