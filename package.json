@@ -4,10 +4,11 @@
   "description": "API REST para controle de usuários - desafio Payfy",
   "main": "server.js",
   "scripts": {
-  "start": "node server.js",
-  "test": "jest"
-},
+    "start": "node server.js",
+    "test": "jest"
+  },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.21.2",
     "knex": "^3.1.0",
     "sqlite3": "^5.1.7"

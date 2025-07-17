@@ -1,7 +1,11 @@
 const express = require('express');
+const cors = require('cors'); // NOVO
 const db = require('./database');
 const app = express();
+
+app.use(cors()); // NOVO
 app.use(express.json());
+
 
 // Middleware simples para validação idade
 function checkAge(req, res, next) {
